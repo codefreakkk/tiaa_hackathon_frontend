@@ -1,7 +1,7 @@
 import React from "react";
 import "../utilities/css/style.css";
 
-function Navbar() {
+const Navbar = () => {
   return (
     <>
       <nav class="navbar navbar-expand-lg bg" style={{backgroundColor: "rgba(0,0,0,0.93)"}}>
