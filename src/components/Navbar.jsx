@@ -4,7 +4,7 @@ import "../utilities/css/style.css";
 function Navbar() {
   return (
     <>
-      <nav class="navbar navbar-expand-lg bg" style={{backgroundColor: "rgba(0,0,0,0.87)"}}>
+      <nav class="navbar navbar-expand-lg bg" style={{backgroundColor: "rgba(0,0,0,0.93)"}}>
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
             {/* Navbar */}
