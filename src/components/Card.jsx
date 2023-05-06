@@ -2,7 +2,7 @@ import React from "react";
 import pic from "../utilities/images/evil.jpg";
 import star from "../utilities/images/star.png";
 
-function Card() {
+const Card =() => {
   return (
     <>
       <div className="card_container">

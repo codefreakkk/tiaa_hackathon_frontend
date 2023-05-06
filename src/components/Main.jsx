@@ -2,7 +2,7 @@ import React from "react";
 import HomeHeader from "./HomeHeader";
 import Card from "./Card";
 
-function Main() {
+const Main = () => {
   return (
     <>
       <div className="main">
