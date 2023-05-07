@@ -16,7 +16,7 @@ function WatchMain({id, cast, awards, duration, genere, release_date }) {
         />
         <TopCast cast={cast}/>
         <AddRating id={id}/>
-        <Reviews />
+        <Reviews id={id} />
       </div>
     </>
   );

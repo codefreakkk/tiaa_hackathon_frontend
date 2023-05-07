@@ -1,26 +1,28 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import like from "../utilities/images/like.png";
 import dislike from "../utilities/images/dislike.png";
 import comment from "../utilities/images/comment.png";
 import view from "../utilities/images/viewcomment.png";
-import Comment from "./Comment"
+import Comment from "./Comment";
+import Replies from "./Replies";
 
-function ReviewsContainer() {
+function ReviewsContainer({
+  movie_id,
+  user_id,
+  user_email,
+  review,
+  dislike_count,
+  like_count,
+}) {
   const [state, setState] = useState(false);
 
   return (
     <>
       <div>
         <div className="review">
-          <span className="username">Posted by Harsh Said</span>
+          <span className="username">Posted by {user_email}</span>
           <div className="content mt-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consequuntur quae laborum, voluptatem temporibus fugiat asperiores
-            illo dolorum totam incidunt odit accusantium dignissimos sint dolore
-            quasi iste aspernatur assumenda harum architecto sequi reprehenderit
-            error? Molestiae beatae accusantium ducimus doloremque minima
-            quibusdam debitis eos laborum, ipsa aspernatur quaerat odit amet
-            veritatis ad.{" "}
+            {review}
           </div>
           <div className="like_container">
             <div className="like mr-3">
@@ -51,11 +53,11 @@ function ReviewsContainer() {
               <div>view replies</div>
             </div>
           </div>
+          {state === true ? <Comment /> : ""}
         </div>
 
         {/* comment */}
-        
-        {state === true ? <Comment/> : ""}
+        {/* <Replies /> */}
       </div>
     </>
   );
