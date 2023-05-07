@@ -69,6 +69,7 @@
 
 .main {
   background-color: black;
+  min-height: 100vh;
   /* later change it */
   /* height: 100vh; */
   /* overflow-y: scroll; */
@@ -124,7 +125,7 @@
     width: 20vh;
     /* background-color: rgba(94, 94, 94, 0.274); */
     background-color: #0f0909;
-    /* height: 40vh; */
+    height: 42vh;
     border-radius: 3px;
     margin-bottom: 25px;
 }
@@ -179,6 +180,8 @@
 .movie_name {
     color: white;
     font-family: 'Inter', sans-serif;
+    height: 40px;
+    font-size: 15px;
 }
 
 .rate {
@@ -411,4 +414,24 @@
 .comment {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
+}
+
+.rate_container {
+  position: absolute;
+  top: 17vh;
+  background-color: #202020;
+  width: 20%;
+  height: 15vh;
+  border-radius: 3px;
+  z-index: 100;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  /* justify-content: center; */
+  flex-direction: column;
+}
+
+.white {
+  color: white;
 }

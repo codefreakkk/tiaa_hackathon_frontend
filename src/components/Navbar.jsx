@@ -1,10 +1,27 @@
-import React from "react";
+import { React, useEffect, useState } from "react";
 import "../utilities/css/style.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const [loginState, setLoginState] = useState(false);
+
+  useEffect(() => {
+    if (localStorage.getItem("token") != null) {
+      setLoginState(true);
+    }
+  }, []);
+
+  function handleLogout() {
+    localStorage.clear();
+    window.location.href = "/"
+  }
+
   return (
     <>
-      <nav class="navbar navbar-expand-lg bg" style={{backgroundColor: "rgba(0,0,0,0.93)"}}>
+      <nav
+        class="navbar navbar-expand-lg bg"
+        style={{ backgroundColor: "rgba(0,0,0,0.93)" }}
+      >
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
             {/* Navbar */}
@@ -49,7 +66,13 @@ const Navbar = () => {
                   </li>
 
                   <li class="nav-item">
-                    <div className="signin">Sign In</div>
+                    {loginState === true ? (
+                        <div className="signin" onClick={handleLogout}>Logout</div>
+                    ) : (
+                      <Link to={"/signin"} style={{ textDecoration: "none" }}>
+                        <div className="signin">Sign In</div>
+                      </Link>
+                    )}
                   </li>
                 </ul>
               </div>
@@ -59,6 +82,6 @@ const Navbar = () => {
       </nav>
     </>
   );
-}
+};
 
 export default Navbar;

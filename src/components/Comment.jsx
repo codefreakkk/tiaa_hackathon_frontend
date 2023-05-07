@@ -3,9 +3,9 @@ import React from "react";
 function Comment() {
   return (
     <>
-      <div className="review">
+      <div className="mt-3">
         <div
-          class="alert alert-success alert-dismissible fade show"
+          class="alert alert-success alert-dismissible mt-4 fade show"
           role="alert"
         >
           Comment added successfully
