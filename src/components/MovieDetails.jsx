@@ -1,6 +1,6 @@
 import React from 'react'
 
-function MovieDetails() {
+function MovieDetails({release_date, duration, awards, genere}) {
   return (
     <>
         {/* Movie details */}
@@ -11,21 +11,21 @@ function MovieDetails() {
 
         <div className="md_title" style={{ color: "black" }}>
           <hr className="gray" />
-          Release Date <span className="name">17-2-2022</span>
+          Release Date <span className="name">{release_date}</span>
           <hr className="gray" />
         </div>
 
         <div className="md_title" style={{ color: "black" }}>
-          Duration <span className="name">2.5 Hours</span>
+          Duration <span className="name">{duration}</span>
           <hr className="gray" />
         </div>
 
         <div className="md_title" style={{ color: "black" }}>
-          Awards <span className="name">Grammy</span>
+          Awards <span className="name">{awards}</span>
           <hr className="gray" />
         </div>
         <div className="md_title" style={{ color: "black" }}>
-          Genere <span className="name">Action</span>
+          Genere <span className="name">{genere}</span>
           <hr className="gray" />
         </div>
 
