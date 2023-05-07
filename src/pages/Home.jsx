@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <>
         <Navbar/>
-        {/* <Services/> */}
+        <Services/>
         <Main/>
         <Footer/>
     </>
